@@ -1,0 +1,10 @@
+
+.bottone 
+{
+  width: 115px;
+  height: 90px;
+  background-color: #FF0000;
+  background-image: url('talpa.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+}

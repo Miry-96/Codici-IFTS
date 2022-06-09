@@ -1,0 +1,27 @@
+package pp;
+
+public class x {
+
+	public static void main(String[] args) {
+		int i = 10;
+		int j, resto;
+		boolean primo = true;
+		while (i < 100) {
+			j = 2;
+			while (j <= i - 1 /* && z != 1 */) {
+				resto = i % j;
+				if (resto == 0)
+					primo = false;
+				j = j + 1;
+			}
+			if (primo == true)
+				System.out.print("il numero" + i + " è primo\n");
+			/// else
+			// System.out.print("il numero " +i+" non è primo\n");
+			i++;
+			primo = true;
+		}
+
+	}
+
+}

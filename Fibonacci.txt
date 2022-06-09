@@ -1,0 +1,21 @@
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+  
+    int a =0;
+    int b =1;
+    int somma = a+b ; 
+    int finoa = 500;
+    System.out.println(a);
+   
+   while(somma<finoa)
+   {
+   System.out.println(somma);
+   somma= a+b;
+   a=b;
+   b=somma;
+   }
+     
+  }
+}

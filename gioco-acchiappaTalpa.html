@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+https://codepen.io/hikku-pikku/pen/vYdzdLb?editors=1010
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p><button onclick="start1(); myMove();">Start game</button>  <button onclick="resetCounter()">Reset</button></p> 
+
+
+<div id ="container">
+  <div id ="animate"onclick="incrementClick(); random();"></div>
+</div>
+<h3>Punteggio</h3>
+<div>
+    <h3 id="counter-label">0</h3>
+</div>
+
+<script>
+
+
+
+function random()  {
+    const elem = document.getElementById("animate");
+     elem.style.top = Math.random()*351+ "px"; 
+     elem.style.left = Math.random()*351 + "px"; 
+     
+}
+
+function start1()  {
+    var start;
+    start=1;
+            }
+
+
+function myMove() {
+    const elem = document.getElementById("animate"); 
+       alert ("myMove");
+     id = setInterval(frame,1500);
+     function frame()   {
+     
+   /* if (start == 0) {
+        clearInterval(id);
+         alert ("clearInterval");
+           } else {*/
+  
+      elem.style.top = Math.random()*351+ "px"; 
+      elem.style.left = Math.random()*351 + "px"; 
+     
+    //}
+  }
+}
+
+var counterVal = 0;
+
+function incrementClick() {
+    updateDisplay(++counterVal);
+}
+
+function resetCounter() {
+ 
+    counterVal = 0;
+    updateDisplay(counterVal);
+    clearInterval(id);
+    
+    
+     const elem = document.getElementById("animate");
+     elem.style.top = 0 + "px"; 
+     elem.style.left = 0 + "px";
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}
+</script>
+
+
+
+
+</body>
+</html>
